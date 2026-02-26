@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin Price Checker | Kabir.exe.</title>
+    <title>Bitcoin Price Checker | Kabir.exe</title>
     <style>
         /* General Page Styling */
         body {
@@ -66,7 +66,7 @@
             background-color: #000000;
             border: 1px solid #ffffff;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtle white glow */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
             text-align: left;
         }
 
@@ -79,17 +79,11 @@
         pre {
             margin: 0;
             font-family: 'Courier New', Courier, monospace;
-            color: #9AE569; /* Default text color */
+            color: #e0e0e0;
             line-height: 1.5;
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-
-        /* Syntax Highlighting Colors */
-        .bdfd-if { color: #A37FFC; }
-        .bdfd-sym { color: #FF4C4C; }
-        .bdfd-func { color: #73FBFF; }
-        .bdfd-text { color: #9AE569; }
 
         /* Copy Button Styling */
         .copy-btn {
@@ -103,7 +97,6 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 0.8rem;
-            z-index: 10;
             transition: all 0.2s ease;
         }
 
@@ -117,46 +110,45 @@
 
     <div class="profile-header">
         <img src="https://cdn.discordapp.com/avatars/1301883723247124521/4793f5066c0ee12d60df0414b57fe1ee.png?size=1024" alt="Avatar" class="avatar">
-        <span class="username">Kabir.exe.</span>
+        <span class="username">Kabir.exe</span>
     </div>
 
     <div class="container">
         <h1>Bitcoin Price Checker Code</h1>
-        <p class="description">A Container Bitcoin Price Checker Code by kabir.exe. with a refresh button. U can use different currency these are inr/usd/eur/jpy/php/rub/pkr/sgd. Usage `.btc <currency>`</p>
+        <p class="description">A Container/Embed Bitcoin Price Checker Code by "kabir.exe.". U can use different currency these are inr/usd/eur/jpy/php/rub/pkr/sgd. Usage `.btc `</p>
 
         <div class="code-container">
             <button class="copy-btn" onclick="copyCode()">Copy</button>
             <div class="code-block">
-<pre id="code-content"><span class="bdfd-func">$nomention</span>
-<span class="bdfd-func">$argsCheck</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">;</span><span class="bdfd-text">Usage: `.btc {currency}`</span><span class="bdfd-sym">]</span>
+<pre id="code-content">$nomention
+$argsCheck[1;Usage: `.btc {currency}`]
 
-<span class="bdfd-if">$if</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==inr<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>₹<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==usd<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>$<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==eur<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>€<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==jpy<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>¥<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==php<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>₱<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==rub<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>₽<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==pkr<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>Rs<span class="bdfd-sym">]</span>
-<span class="bdfd-if">$elseif</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]</span>==sgd<span class="bdfd-sym">]</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">;</span>S$<span class="bdfd-sym">]</span>
+$if[$message[1]==inr]$var[$;₹]
+$elseif[$message[1]==usd]$var[$;$]
+$elseif[$message[1]==eur]$var[$;€]
+$elseif[$message[1]==jpy]$var[$;¥]
+$elseif[$message[1]==php]$var[$;₱]
+$elseif[$message[1]==rub]$var[$;₽]
+$elseif[$message[1]==pkr]$var[$;Rs]
+$elseif[$message[1]==sgd]$var[$;S$]
 
-<span class="bdfd-if">$endif</span>
+$endif
 
-<span class="bdfd-func">$httpGet</span><span class="bdfd-sym">[</span><span class="bdfd-text">https://api.coingecko.com/api/v3/coins/markets?vs_currency=</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]]</span>
-<span class="bdfd-func">$author</span><span class="bdfd-sym">[</span><span class="bdfd-text">Bitcoin (BTC) price in </span><span class="bdfd-func">$toUppercase</span><span class="bdfd-sym">[</span><span class="bdfd-func">$message</span><span class="bdfd-sym">[</span>1<span class="bdfd-sym">]]]</span>
-<span class="bdfd-func">$authorIcon</span><span class="bdfd-sym">[</span><span class="bdfd-text">https://cdn.discordapp.com/attachments/1446064234877157509/1446064286605512714/2048px-Bitcoin.svg.png</span><span class="bdfd-sym">]</span>
-<span class="bdfd-func">$addField</span><span class="bdfd-sym">[</span><span class="bdfd-text">&lt;:1000530819:1470489716905345024&gt; Price:**</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">]</span><span class="bdfd-text">**</span><span class="bdfd-func">$numberSeparator</span><span class="bdfd-sym">[</span><span class="bdfd-func">$round</span><span class="bdfd-sym">[</span><span class="bdfd-func">$httpResult</span><span class="bdfd-sym">[</span>0<span class="bdfd-sym">;</span>current_price<span class="bdfd-sym">]]]]</span>
-<span class="bdfd-func">$addField</span><span class="bdfd-sym">[</span><span class="bdfd-text">&lt;:1000530047:1470489714543825059&gt; Highest (24h):**</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">]</span><span class="bdfd-text">**</span><span class="bdfd-func">$numberSeparator</span><span class="bdfd-sym">[</span><span class="bdfd-func">$round</span><span class="bdfd-sym">[</span><span class="bdfd-func">$httpResult</span><span class="bdfd-sym">[</span>0<span class="bdfd-sym">;</span>high_24h<span class="bdfd-sym">]]]]</span>
-<span class="bdfd-func">$addField</span><span class="bdfd-sym">[</span><span class="bdfd-text">&lt;:1000530048:1470489711964459080&gt; Lowest (24h):**</span><span class="bdfd-func">$var</span><span class="bdfd-sym">[</span>$<span class="bdfd-sym">]</span><span class="bdfd-text">**</span><span class="bdfd-func">$numberSeparator</span><span class="bdfd-sym">[</span><span class="bdfd-func">$round</span><span class="bdfd-sym">[</span><span class="bdfd-func">$httpResult</span><span class="bdfd-sym">[</span>0<span class="bdfd-sym">;</span>low_24h<span class="bdfd-sym">]]]]</span>
-<span class="bdfd-func">$color</span><span class="bdfd-sym">[</span>ffffff<span class="bdfd-sym">]</span>
-<span class="bdfd-func">$footer</span><span class="bdfd-sym">[</span><span class="bdfd-text">Source www.coingecko.com</span><span class="bdfd-sym">]</span>
-<span class="bdfd-func">$footerIcon</span><span class="bdfd-sym">[</span><span class="bdfd-text">https://cdn.discordapp.com/attachments/1446064234877157509/1446070067681820693/CoinGecko.png</span><span class="bdfd-sym">]</span></pre>
+$httpGet[https://api.coingecko.com/api/v3/coins/markets?vs_currency=$message[1]]
+$author[Bitcoin (BTC) price in $toUppercase[$message[1]]]
+$authorIcon[https://cdn.discordapp.com/attachments/1446064234877157509/1446064286605512714/2048px-Bitcoin.svg.png]
+$addField[<:1000530819:1470489716905345024> Price;**$var[$]**$numberSeparator[$round[$httpResult[0;current_price]]]]
+$addField[<:1000530047:1470489714543825059> Highest (24h);**$var[$]**$numberSeparator[$round[$httpResult[0;high_24h]]]]
+$addField[<:1000530048:1470489711964459080> Lowest (24h);**$var[$]**$numberSeparator[$round[$httpResult[0;low_24h]]]]
+$color[ffffff]
+$footer[Source www.coingecko.com]
+$footerIcon[https://cdn.discordapp.com/attachments/1446064234877157509/1446070067681820693/CoinGecko.png]</pre>
             </div>
         </div>
     </div>
 
     <script>
         function copyCode() {
-            // .innerText automatically ignores HTML tags like <span>
             const code = document.getElementById('code-content').innerText;
             const btn = document.querySelector('.copy-btn');
             
@@ -171,7 +163,4 @@
 
 </body>
 </html>
-
-
-
-
+    
