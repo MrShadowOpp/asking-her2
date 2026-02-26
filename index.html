@@ -174,9 +174,9 @@ $endif
 $httpGet[https://api.coingecko.com/api/v3/coins/markets?vs_currency=$message[1]]
 $author[Bitcoin (BTC) price in $toUppercase[$message[1]]]
 $authorIcon[https://cdn.discordapp.com/attachments/1446064234877157509/1446064286605512714/2048px-Bitcoin.svg.png]
-$addField[<:1000530819:1470489716905345024> Price;**$var[$]**$numberSeparator[$round[$httpResult[0;current_price]]]]
-$addField[<:1000530047:1470489714543825059> Highest (24h);**$var[$]**$numberSeparator[$round[$httpResult[0;high_24h]]]]
-$addField[<:1000530048:1470489711964459080> Lowest (24h);**$var[$]**$numberSeparator[$round[$httpResult[0;low_24h]]]]
+$addField[💲 Price;**$var[$]**$numberSeparator[$round[$httpResult[0;current_price]]]]
+$addField[📈 Highest (24h);**$var[$]**$numberSeparator[$round[$httpResult[0;high_24h]]]]
+$addField[📉 Lowest (24h);**$var[$]**$numberSeparator[$round[$httpResult[0;low_24h]]]]
 $color[ffffff]
 $footer[Source www.coingecko.com]
 $footerIcon[https://cdn.discordapp.com/attachments/1446064234877157509/1446070067681820693/CoinGecko.png]</pre>
@@ -262,6 +262,7 @@ $addTextDisplay[-# Source www.coingeko.com;btc]`
 </body>
 </html>
     
+
 
 
 
